@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.chwltd"
             artifactId = "chutils"
-            version = "1.0.1"
+            version = "1.0.4"
 
             // Specify what to publish
             // For an Android library:
