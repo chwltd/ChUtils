@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("maven-publish")
 }
 
 android {
@@ -26,8 +27,24 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.chwltd"
+            artifactId = "chutils"
+            version = "1.0.1"
+
+            // Specify what to publish
+            // For an Android library:
+            // afterEvaluate {
+            //     artifact(tasks.getByName("bundleReleaseAar"))
+            // }
+        }
     }
 }
 
