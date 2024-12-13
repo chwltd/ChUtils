@@ -31,22 +31,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
-
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.github.chwltd"
-            artifactId = "chutils"
-            version = "1.0.4"
-
-            // Specify what to publish
-            // For an Android library:
-            // afterEvaluate {
-            //     artifact(tasks.getByName("bundleReleaseAar"))
-            // }
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            create<MavenPublication>("release") {
+                groupId = "com.github.chwltd"
+                artifactId = "ChUtils"
+                version = "1.0.6"
+            }
         }
     }
-}
 
 dependencies {
 

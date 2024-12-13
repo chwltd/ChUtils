@@ -20,5 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ChUtils"
-include(":app")
 include(":utils")
